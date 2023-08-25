@@ -1,13 +1,19 @@
 import { useState } from "react";
 
-// {items: array, heading: string}
+// {items: array, heading: string, onSelected: () => void}
 interface ResuableListGroupProps {
   countries: string[];
   heading: string;
+  onSelectItem: (item: string) => void;
 }
 
-function ResuableListGroup({ countries, heading }: ResuableListGroupProps) {
+function ResuableListGroup({
+  countries,
+  heading,
+  onSelectItem,
+}: ResuableListGroupProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
+
   return (
     <>
       <h1>{heading}</h1>
@@ -21,7 +27,10 @@ function ResuableListGroup({ countries, heading }: ResuableListGroupProps) {
                 : "list-group-item"
             }
             key={city}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(index);
+              onSelectItem(city);
+            }}
           >
             {city}
           </li>

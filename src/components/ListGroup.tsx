@@ -3,7 +3,6 @@ import { useState } from "react";
 function ListGroup() {
   const cities = ["New York", "London", "Paris", "New Delhi", "San Francisco"];
   const [selectedIndex, setSelectedIndex] = useState(-1);
-
   /*  const handleClick = (event: MouseEvent) => {
     console.log(event);
   };
