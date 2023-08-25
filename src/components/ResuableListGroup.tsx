@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-function ListGroup() {
-  const cities = ["New York", "London", "Paris", "New Delhi", "San Francisco"];
-  const [selectedIndex, setSelectedIndex] = useState(-1);
+// {items: array, heading: string}
+interface ResuableListGroupProps {
+  countries: string[];
+  heading: string;
+}
 
-  /*  const handleClick = (event: MouseEvent) => {
-    console.log(event);
-  };
- */
+function ResuableListGroup({ countries, heading }: ResuableListGroupProps) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   return (
     <>
-      <h1>List Group</h1>
-      {cities.length === 0 && <p>No cities found</p>}
+      <h1>{heading}</h1>
+      {countries.length === 0 && <p>No cities found</p>}
       <ul className="list-group">
-        {cities.map((city, index) => (
+        {countries.map((city, index) => (
           <li
             className={
               selectedIndex == index
@@ -31,4 +31,4 @@ function ListGroup() {
   );
 }
 
-export default ListGroup;
+export default ResuableListGroup;
