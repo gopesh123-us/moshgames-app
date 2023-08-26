@@ -21,7 +21,11 @@ function App() {
   };
   return (
     <div>
-      <Alert>Hello World Alert</Alert>
+      <Alert>
+        <strong>
+          Hello World <i>Alert</i>
+        </strong>
+      </Alert>
       <Button btnName={buttonName} onClicking={handleClick} color={"primary"} />
       <ResuableListGroup
         countries={countries}
