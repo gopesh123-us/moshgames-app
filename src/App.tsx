@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ListGroup from "./components/ListGroup";
+import ListGroup from "./components/ListGroup/ListGroup";
 import ResuableListGroup from "./components/ResuableListGroup";
 import FamilyNames from "./components/FamilyNames";
 import Button from "./components/Button";
