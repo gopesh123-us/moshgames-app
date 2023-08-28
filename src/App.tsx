@@ -7,6 +7,7 @@ import Alert from "./components/Alert";
 import ButtonV2 from "./components/ButtonV2";
 import ButtonWithAlert from "./components/ButtonWithAlert";
 import DisplayLists from "./components/DisplayLists";
+import "./App.css";
 
 function App() {
   const countries = ["Amsterdam", "England", "France", "India", "Nepal"];
